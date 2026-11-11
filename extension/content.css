@@ -1,0 +1,17 @@
+/* 右サイドバーの「おすすめユーザー」欄 */
+[data-testid="sidebarColumn"] aside[aria-label="おすすめユーザー"],
+[data-testid="sidebarColumn"] aside[aria-label="Who to follow"],
+[data-testid="sidebarColumn"] aside[aria-label="You might like"] {
+  display: none !important;
+}
+
+/* 「おすすめ」タブ (content.js が印を付ける) */
+[data-xhr-hidden="true"] {
+  display: none !important;
+}
+
+/* 「おすすめ」が選択されている間はタイムラインを隠し、中身が一瞬見えるのを防ぐ */
+html[data-xhr-foryou="true"] [data-testid="primaryColumn"] [aria-label^="タイムライン"],
+html[data-xhr-foryou="true"] [data-testid="primaryColumn"] [aria-label^="Timeline"] {
+  visibility: hidden !important;
+}
