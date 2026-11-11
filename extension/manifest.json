@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "X おすすめ非表示",
+  "version": "1.0.0",
+  "description": "X (Twitter) のホームの「おすすめ」タブとおすすめユーザー欄を非表示にし、「フォロー中」を表示します。",
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ]
+}
